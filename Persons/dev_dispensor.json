@@ -1,0 +1,16 @@
+{
+    "Person": {
+        "name": "[Developer Dispensor]",
+        "dialog": {
+            "Give Item 001 - Useless Item": [
+                "This item does nothing",
+                "<Item:test object>"
+            ],
+            "Give Item 002 - Use Item": [
+                "This item can be used",
+                "<Item:test object 2>"
+            ]
+        },
+        "parents": ["crashed_plane"]
+    }
+}

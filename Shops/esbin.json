@@ -1,0 +1,24 @@
+{
+    "Shop": {
+        "name": "Esbin",
+        "items": [
+            "<Item:health potion>",
+            "<Item:backpack>",
+            "<Item:test object>"
+        ],
+        "dialog": {
+            "What is this place?": [
+                "This is my little shop",
+                "You must be new around here, everyone knows me and my shop",
+                "The best deals for the best prices",
+                "Yes sir...customer service is always number 1",
+                "Anything else?"
+            ],
+            "Can I order something?": [
+                "Sure, if you have the proper coin and know EXACTLY what you want",
+                "Somebody somewhere will get it for me, thats networking and the power of customer service"
+            ]
+        },
+        "parents": ["city"]
+    }
+}

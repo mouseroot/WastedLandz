@@ -1,0 +1,11 @@
+{
+    "Item": {
+        "name": "health potion",
+        "value": 15,
+        "description": "Restores about 5 HP",
+        "uses": 1,
+        "can_use": true,
+        "use_argument": 5,
+        "Use": "HealPlayer"
+    }
+}

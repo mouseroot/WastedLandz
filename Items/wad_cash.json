@@ -1,0 +1,8 @@
+{
+    "Item": {
+        "name": "wad of cash",
+        "value": 500,
+        "description": "A thick bundle of $1 bills, looks to be atleast 500 here",
+        "can_use": false
+    }
+}

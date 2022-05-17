@@ -1,0 +1,37 @@
+{
+    "Person": {
+        "name": "Bill",
+        "dialog": {
+            "Who are you?": [
+                "So your finally awake",
+                "Only thing left from the passangers is this wad of bills",
+                "<Item:wad_cash>",
+                "I dont care for money, im just glad im alive"
+            ],
+            "I am looking for something": [
+                "Well I cant help you, you should look around for whatever it is",
+                "There appears to be a city in the distance, perhaps someone there can help you out"
+            ],
+            "What happened to the plane?": [
+                "Well we were crusing just fine and we got hit by a gust of wind",
+                "It threw us off course and then we lost control of the plane",
+                "It looks like just the two of us survived..."
+            ],
+            "Where are we?": [
+                "Well that is a good question, isnt it?",
+                "The last I checked we were heading North and then go pushed off course to the west",
+                "So...Basically...",
+                "I have no clue...",
+                "...",
+                "If only we had a compass and a map..."                
+            ],
+            "What are we going to do?": [
+                "Well, for now im staying here",
+                "Going to see if I cant salvage something of this wreck",
+                "what?...No this plane will never fly again",
+                "But we can use the suplies to make a shelter or something"               
+            ]
+        },
+        "parents": ["crashed_plane"]
+    }
+}

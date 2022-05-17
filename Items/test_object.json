@@ -1,0 +1,9 @@
+{
+    "Item": {
+        "name": "test object",
+        "value": 0,
+        "description": "Small test object, does nothing",
+        "can_use": false,
+        "uses": 1
+    }
+}

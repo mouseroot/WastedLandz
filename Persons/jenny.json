@@ -1,0 +1,20 @@
+{
+    "Person": {
+        "name": "Jenny",
+        "dialog": {
+            "Where am I?": ["Tourine City"],
+            "Who are you?": ["My name is jenny"],
+            "I am looking for something": [
+                "Well you can always ask esbin, he has lots of good loot",
+                "He also seems to have a knack for finding the rarest items and sells them at a fair price",
+                "It really is the best place to make a quick buck, if you have junk to sell"
+            ],
+            "Do you have anything for sell?": [
+                "No, I dont like to carry things with me",
+                "I would visit esbin, he has everything"        
+            ]
+
+        },
+        "parents": ["city"]
+    }
+}

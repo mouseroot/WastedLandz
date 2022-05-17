@@ -1,0 +1,26 @@
+{
+    "Person": {
+        "name": "Jonathan Landry",
+        "dialog": {
+            "Who are you?": [
+                "I am the game developer",
+                "I am simply here to demonstrate file loading",
+                "So...",
+                "Hello...",
+                "And...Goodbye"
+            ],
+            "Do you have anything for sale?": [
+                "Absolutly Not",
+                "Best I can do for you is point you at the Debug Mode in File Managment",
+                "$500 on me, but dont abuse it, nobody likes too easy of a game"
+            ],
+            "Got anything for FREE?": [
+                "Well....I guess you could have this",
+                "<Item:backpack>",
+                "Its my old backpack",
+                "Better then nothing im sure"
+            ]
+        },
+        "parents": ["crashed_plane"]
+    }
+}

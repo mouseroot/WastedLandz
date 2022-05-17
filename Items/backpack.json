@@ -1,0 +1,9 @@
+{
+    "Item": {
+        "name": "backpack",
+        "value": 15,
+        "description": "A small black pack that can hold around 10 items",
+        "can_use": true,
+        "uses": -1
+    }
+}
