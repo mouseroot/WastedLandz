@@ -5,7 +5,7 @@ import json
 from Lib.player import Player
 from Lib.place import Place
 from Lib.enemy import Enemy
-from Lib.library import *
+from Lib.library import Item
 from Lib.menu import Menu
 from Lib.person import Person,Shop
 

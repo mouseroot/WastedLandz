@@ -1,4 +1,4 @@
-from Lib.enemy import Enemy
+#from Lib.enemy import Enemy
 
 class Item:
     def __init__(self, name):
