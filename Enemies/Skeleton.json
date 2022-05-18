@@ -1,0 +1,19 @@
+{
+    "Enemy": {
+        "name": "Skeleton",
+        "hp": 100,
+        "exp": 3,
+        "items": [],
+        "attacks": {
+            "basic": {
+                "damage": 1
+            },
+            "bone club": {
+                "damage": 3
+            }
+        },
+        "spawns": [
+            "Swamp"
+        ]
+    }
+}

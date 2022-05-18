@@ -16,7 +16,13 @@ def HealPlayer(player, val):
     player.hp += int(val)
 
 
+class Wilderness:
+    def __init__(self, name):
+        self.name = name
+        self.enemies = []
 
+
+#Normal places , Safe Zones
 
 crashed_plane = Place("Crashed Plane")
 underground = Place("The Underground Subway")
@@ -29,6 +35,11 @@ city2 = Place("Big City 2")
 haven = Place("Haven")
 storage = Place("Storage Cellar")
 city = Place("Tourine City")
+
+#Wilderness places, fight zones, loot areas (dungeons)
+
+swamp = Wilderness("Swamp")
+
 
 
 city.addExploreNode(underground, f"Travel to {underground.name}")
@@ -72,6 +83,7 @@ class Game:
 
         self.item_table = {}
         self.person_table = {}
+        self.enemy_table = {}
         self.places_table = {
             "crashed_plane": crashed_plane,
             "graveyard": graveyard,
@@ -101,6 +113,22 @@ class Game:
             "Mind/Sanity": "How sane you are your ability to fight and defend",
             "Lockpick": "Your skill with a paperclip used in lockpicking"
         }
+
+    def LoadEnemy(self, data):
+        e_data = json.loads(data)["Enemy"]
+        enemy_name = e_data["name"]
+        enemy_hp = int(e_data["hp"])
+        enemy_exp = int(e_data["exp"])
+        enemy_attacks = e_data["attacks"]
+        
+        enemy = Enemy(enemy_name)
+        enemy.hp = enemy_hp
+        enemy.exp = enemy_exp
+        for attack in enemy_attacks:
+            enemy.attacks[attack] = enemy_attacks[attack]
+        return enemy, None
+        
+        
 
     def LoadShop(self, data):
         shop_data = json.loads(data)["Shop"]
@@ -187,8 +215,14 @@ class Game:
                 nShop, places = self.LoadShop(data)
                 for place in places:
                     self.places_table[place].addExploreNode(nShop,f"Visit {nShop.name}'s Shop")
-
-        input("Complete")
+        print("Loading Enemies...")
+        for json_file in listdir("Enemies"):
+            print(f"Loading and Parsing ENEMY: {json_file}")
+            with open(f"Enemies//{json_file}") as enemy_file:
+                data = enemy_file.read()
+                nEnemy, places = self.LoadEnemy(data)
+                self.enemy_table[nEnemy.name] = nEnemy
+        input("Complete, Enter to continue...")
 
     def gameloop(self):
         while 1:
@@ -315,7 +349,7 @@ class Game:
                     
 
 if __name__ == "__main__":
-    player_name = input("What is the players name?")
+    player_name = input("What is the players name? ")
     player = Player(player_name)
     g = Game()
     g.initgame()
